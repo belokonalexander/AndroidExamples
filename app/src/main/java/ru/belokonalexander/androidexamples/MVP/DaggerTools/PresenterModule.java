@@ -15,11 +15,8 @@ public class PresenterModule {
 
     private final UserContract.View view;
 
-    private final User user;
-
-    public PresenterModule(UserContract.View view, User user) {
+    public PresenterModule(UserContract.View view) {
         this.view = view;
-        this.user = user;
     }
 
     @Provides
@@ -29,7 +26,7 @@ public class PresenterModule {
 
     @Provides
     User provideUser() {
-        return user;
+        return new User();
     }
 
    /* @Provides

@@ -13,8 +13,8 @@ import butterknife.ButterKnife;
 import butterknife.OnClick;
 
 
-import dagger.android.AndroidInjection;
-
+import ru.belokonalexander.androidexamples.MVP.DaggerTools.DaggerMVPComponent;
+import ru.belokonalexander.androidexamples.MVP.DaggerTools.PresenterModule;
 import ru.belokonalexander.androidexamples.MVP.Presenters.UserPresenter;
 import ru.belokonalexander.androidexamples.R;
 import ru.belokonalexander.androidexamples.SampleActivity;
@@ -41,12 +41,10 @@ public class MVPUser extends SampleActivity implements UserContract.View {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-        AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constraint_layout);
         ButterKnife.bind(this);
-
-        //DaggerMVPComponent.builder().presenterModule(new PresenterModule(this,new User())).build().inject(this);
+        DaggerMVPComponent.builder().presenterModule(new PresenterModule(this)).build().inject(this);
 
 
         initViews();
