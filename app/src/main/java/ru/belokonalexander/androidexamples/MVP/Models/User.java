@@ -1,4 +1,4 @@
-package ru.belokonalexander.androidexamples.MVP.Modlels;
+package ru.belokonalexander.androidexamples.MVP.Models;
 
 /**
  * Created by Alexander on 20.04.2017.

@@ -5,10 +5,16 @@ import android.os.Bundle;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import javax.inject.Inject;
+
 import GS.Views.CustomEditText;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+
+
+import dagger.android.AndroidInjection;
+
 import ru.belokonalexander.androidexamples.MVP.Presenters.UserPresenter;
 import ru.belokonalexander.androidexamples.R;
 import ru.belokonalexander.androidexamples.SampleActivity;
@@ -17,7 +23,8 @@ import ru.belokonalexander.androidexamples.SampleActivity;
 
 public class MVPUser extends SampleActivity implements UserContract.View {
 
-    private UserContract.Presenter presenter;
+    @Inject
+    UserPresenter presenter;
 
     @BindView(R.id.name_edit)
     CustomEditText editText;
@@ -30,13 +37,18 @@ public class MVPUser extends SampleActivity implements UserContract.View {
         presenter.sendMessage();
     }
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        AndroidInjection.inject(this);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constraint_layout);
         ButterKnife.bind(this);
 
-        presenter = new UserPresenter(this);
+        //DaggerMVPComponent.builder().presenterModule(new PresenterModule(this,new User())).build().inject(this);
+
+
         initViews();
     }
 

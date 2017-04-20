@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import ru.belokonalexander.androidexamples.MVP.MVPUser;
 
 

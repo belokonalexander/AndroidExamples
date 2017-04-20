@@ -1,10 +1,11 @@
 package ru.belokonalexander.androidexamples.MVP.Presenters;
 
-import android.util.Log;
+
+
+import javax.inject.Inject;
 
 import GS.StaticHelpers;
-import ru.belokonalexander.androidexamples.MVP.MVPUser;
-import ru.belokonalexander.androidexamples.MVP.Modlels.User;
+import ru.belokonalexander.androidexamples.MVP.Models.User;
 import ru.belokonalexander.androidexamples.MVP.UserContract;
 
 /**
@@ -19,8 +20,9 @@ public class UserPresenter implements UserContract.Presenter {
     //связь с интерфейсом вью
     private  UserContract.View view;
 
-    public UserPresenter( UserContract.View view) {
-        this.user = new User();
+    @Inject
+    public UserPresenter(User user, UserContract.View view) {
+        this.user = user;
         this.view = view;
     }
 
