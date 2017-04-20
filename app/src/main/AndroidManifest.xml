@@ -15,7 +15,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConstraintLayout" />
+        <activity android:name=".MVP.MVPUser" />
         <activity android:name=".ToolbarSample"></activity>
     </application>
 
