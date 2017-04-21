@@ -18,7 +18,7 @@
         </activity>
         <activity android:name=".MVP.MVPUser" />
         <activity android:name=".ToolbarSample" />
-
+        <activity android:name=".Moxy.MoxyActivity"></activity>
     </application>
 
 </manifest>

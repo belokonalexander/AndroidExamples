@@ -9,7 +9,7 @@ import ru.belokonalexander.androidexamples.MVP.UserContract;
  * Created by Alexander on 20.04.2017.
  */
 
-@Component(modules = {PresenterModule.class, TestModule.class})
+@Component(modules = {PresenterModule.class})
 public interface MVPComponent {
     void inject(MVPUser mvpUserActivity);
 }

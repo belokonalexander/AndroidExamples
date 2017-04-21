@@ -44,8 +44,8 @@ public class MVPUser extends SampleActivity implements UserContract.View {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_constraint_layout);
         ButterKnife.bind(this);
-        DaggerMVPComponent.builder().presenterModule(new PresenterModule(this)).build().inject(this);
 
+        DaggerMVPComponent.builder().presenterModule(new PresenterModule(this)).build().inject(this);
 
         initViews();
     }

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <TextView
+    <Button
         android:layout_width="match_parent"
         android:layout_height="48dp"
         android:id="@+id/link_text"
@@ -13,8 +13,10 @@
         android:gravity="center_vertical"
         android:padding="8dp"
         android:textStyle="bold"
-        android:background="@android:drawable/editbox_background"
 
-        />
+        android:clickable="true"
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:elevation="0dp"
+         />
     
 </LinearLayout>

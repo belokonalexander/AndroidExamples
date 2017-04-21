@@ -26,12 +26,8 @@ public class PresenterModule {
 
     @Provides
     User provideUser() {
-        return new User();
+        return new User("Test", 18);
     }
 
-   /* @Provides
-    UserContract.Presenter providePresenter(){
-        return new UserPresenter(user,view);
-    }*/
 
 }
